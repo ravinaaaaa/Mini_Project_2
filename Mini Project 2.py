@@ -33,7 +33,7 @@ reservasi = []
 def tabel_reservasi():
     table = PrettyTable(['ID', 'Nama', 'Tanggal', 'Jumlah Orang', 'Jenis Treatment', 'Total Harga'])
     
-    index = 1  # Mulai indeks dari 1
+    index = 1
     for res in reservasi:
         table.add_row([index, res['name'], res['date'], res['jumlah_orang'], res['service_name'], res['total_price']])
         index += 1
