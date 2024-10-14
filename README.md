@@ -1,6 +1,8 @@
 # Mini_Project_2
 Ravina Eka Adiya 2409116078 Sistem Informasi B
 
+![minpro ddp 2 drawio](https://github.com/user-attachments/assets/4754c6ce-4a2e-47d6-9c17-fe63d5022a17)
+
 ## mengimpor kelas Prettytable dari modul prettytable. digunakan untuk membuat tabel yang terformat dengan baik saat menampilkan data
 from prettytable import PrettyTable
 
@@ -12,14 +14,25 @@ def login():
     pw = input("Masukan Password: ")
 ## untuk memeriksa apakah username dan password yang dimasukan cocok dengan data admin yang telah dibuat
     if user == "admin" and pw == "admin012" :
+## mencetak selamat datang ke user
+        print("Halo " +(user), "selamat datang!!!")
         return "admin"
 ## untuk memeriksa apakah username dan password yang dimasukan cocok dengan data pelanggan yang telah dibuat
     elif user == "pelanggan" and pw == "pelanggan123" :
-## jika tidak ada yang cocok maka akan mencetak pesan bahwa username dan password yang dimasukan salah
+## mencetak selamat datang ke user        
+        print("Halo " +(user), "selamat datang!!!")
         return "pelanggan"
+## jika tidak ada yang cocok maka akan mencetak pesan bahwa username dan password yang dimasukan salah
     else:
         print("Username atau Password salah!")
         return None
+## output login sebagai admin
+![image](https://github.com/user-attachments/assets/c0eb0563-1806-4b95-ad4a-70d8f384af57)
+
+## output login sebagai pelanggan
+![image](https://github.com/user-attachments/assets/21015f1d-9a57-4646-9dea-e8a607fb019f)
+
+
 
 ## mendefinisikan tabel layanan
 def tabel_layanan():
@@ -81,6 +94,10 @@ def menu_admin():
 ## jika admin pilih '1', maka akan memanggil fungsi tabel layanan untuk menunjukkan semua layanan
         if pilih == '1':
            tabel_layanan()
+## output if pilih '1'
+![image](https://github.com/user-attachments/assets/4a5c70fe-de74-4c4c-97d4-7fd706cf3f32)
+
+
 ## jika admin memilih '2' untuk menambah layanan
         elif pilih == '2':
 ## meminta admin untuk memasukan nama jenis treatment baru
@@ -95,6 +112,9 @@ def menu_admin():
             print("Layanan berhasil ditambah!!!")
 ## menampilkan tabel layanan
             tabel_layanan()
+## output if pilih '2'
+![image](https://github.com/user-attachments/assets/86e0b4b8-de51-4ee3-911e-64fde4ea4f39)
+
 
 ## jika admin memilih untuk mengedit layanan
         elif pilih == '3':
@@ -119,6 +139,9 @@ def menu_admin():
 ## jika service adalah None maka pesan eror akan ditampilkan
             else:
                 print("Maaf, Jenis Treatment tidak ditemukan :(")
+## output if pilih '3'
+![image](https://github.com/user-attachments/assets/ed0f7c45-a057-4d51-8227-54d95172d664)
+
 
 ## jika admin memilih '4' untuk menghapus layanan
         elif pilih == '4':
@@ -130,6 +153,9 @@ def menu_admin():
             print("Jenis Treatment berhasil dihapus!!!")
 ## menampilkan tabel layanan
             tabel_layanan()
+## output if pilih '4'
+![image](https://github.com/user-attachments/assets/6b7fcb0f-50a6-424d-a882-d9a48289a87f)
+
 
 ## jika admin pilih '5' maka admin keluar dari program
         elif pilih == '5':    
@@ -137,9 +163,15 @@ def menu_admin():
             print("Terima kasih Love <33333")
 ## menghentikan loop yang sedang berjalan
             break
+## output if pilih '5'
+![image](https://github.com/user-attachments/assets/0a357e0a-6cfb-4602-8353-1a4308991309)
+
 ## jika input pengguna tidak cocok dengan pilihan yang valid, maka akan ditampilakn pesan kesalahan
         else:
             print("Pilihan tidak valid!")
+## output jika tidak valid
+![image](https://github.com/user-attachments/assets/d4452374-a743-42cb-b473-25dbfe511e89)
+
 
 ## mendefinisikan fungsi menu pelanggan
 def menu_pelanggan():
@@ -157,10 +189,18 @@ def menu_pelanggan():
         if pilih == '1':
 ## memanggil fungsi tabel layanan
             tabel_layanan()
+## output if pilih '1'
+![image](https://github.com/user-attachments/assets/d5cfb7cd-970b-4610-8134-d9f159bee5bc)
+
+
 ## jika pelanggan pilih '2' untuk melihat reservasi 
         elif pilih == '2':
 ## memanggil fungsi tabel reservasi
             tabel_reservasi()
+## output if pilih '2'
+![image](https://github.com/user-attachments/assets/b3b37a75-a991-423b-bf70-b77d0bbe1b63)
+
+
 ## jika pelanggan pilih '3' untuk membuat reservasi
         elif pilih == '3':
 ## memanggil fungsi tabel layanan
@@ -216,6 +256,9 @@ def menu_pelanggan():
 ## mencetak pesan jika tidak ada layanan yang berhasil dipesan
             else:
                 print("Tidak ada layanan yang berhasil dipesan.")
+## output if pilih '4'
+![image](https://github.com/user-attachments/assets/1085533e-16c3-437a-b894-eaaab0b54aae)
+
 
 ## jika pelanggan memilih keluar
         elif pilih == '4':
@@ -226,9 +269,15 @@ def menu_pelanggan():
                 print("Terima kasih Love <33333")
 ## menghentikan loop dan keluar dari menu pelanggan
                 break
+## output if pilih '4'
+![image](https://github.com/user-attachments/assets/b00c3699-e569-4fb2-94dc-af74fce0a753)
+
 ## jika input tidak cocok dengan pilihan yang ada, maka akan menampilkan pesan kesalahan
         else:
             print("Pilihan tidak valid! Silakan coba lagi.")
+## output jika pilihan tidak valid
+![image](https://github.com/user-attachments/assets/4223549e-4dd5-454f-a1c0-7ec70c446d7c)
+
 
 ## mengecek apakah file ini dijalankan sebagai program utama
 if __name__ == "__main__":
@@ -253,3 +302,8 @@ if __name__ == "__main__":
         if lanjut.lower() != 'ya':
             print("Terima kasih! Sampai jumpa lagi!")
             break
+## output jika pengguna ingin login lagi
+![image](https://github.com/user-attachments/assets/27b7a391-a804-4989-b400-bae877d6a45a)
+
+## output jika pengguna tidak ingin login lagi
+![image](https://github.com/user-attachments/assets/61ae2cf0-b360-4be1-be9a-9c085f9e8e6c)
